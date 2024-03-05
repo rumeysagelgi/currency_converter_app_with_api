@@ -13,7 +13,7 @@ export default function Home({ symbols }) {
   const convertCurrency = () => {
     const options = {
       method: "GET",
-      url: "http://localhost:3000/api/convert",
+      url: "https://currency-converter-app-with-api-puce.vercel.app/api/convert",
       params: { convertFrom, convertTo, amount },
     };
 
@@ -87,7 +87,7 @@ export default function Home({ symbols }) {
 
 export async function getServerSideProps() {
   const res = await axios.get(
-    "http://localhost:3000/api/symbol"
+    "https://currency-converter-app-with-api-puce.vercel.app/api/symbol"
   );
   const { data } = res;
   const { symbols } = data;
