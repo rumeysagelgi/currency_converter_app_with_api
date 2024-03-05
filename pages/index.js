@@ -13,7 +13,7 @@ export default function Home({ symbols }) {
   const convertCurrency = () => {
     const options = {
       method: "GET",
-      url: "https://currency-converter-app-with-api-puce.vercel.app/api/convert",
+      url: "https://currency-converter-app-with-api-rumeysa-gelgis-projects.vercel.app/api/convert",
       params: { convertFrom, convertTo, amount },
     };
 
@@ -87,7 +87,7 @@ export default function Home({ symbols }) {
 
 export async function getServerSideProps() {
   const res = await axios.get(
-    "https://currency-converter-app-with-api-puce.vercel.app/api/symbol"
+    "https://currency-converter-app-with-api-rumeysa-gelgis-projects.vercel.app/api/symbol"
   );
   const { data } = res;
   const { symbols } = data;
